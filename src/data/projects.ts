@@ -381,47 +381,4 @@ export const projects: Project[] = [
     ],
     githubLinks: ["https://github.com/Vijay-papanaboina/VideoChat"],
   },
-  {
-    id: "k8s-learning",
-    title: "Kubernetes CRUD Demo App",
-    description:
-      "A full-stack CRUD application demonstrating Kubernetes deployment patterns, service discovery, and container orchestration.",
-    image: "/projects/k8s-learning.png",
-    complexity: "Intermediate",
-    repos: [
-      {
-        name: "K8s Learning App (Monorepo)",
-        tech: "React, TypeScript, Node.js, Express, PostgreSQL, Kubernetes, Docker",
-        purpose: "Monorepo with K8s manifests",
-      },
-    ],
-    features: [
-      "User management CRUD operations",
-      "Kubernetes namespace isolation",
-      "ConfigMaps for configuration",
-      "Secrets for sensitive data",
-      "Persistent Volumes for PostgreSQL",
-      "Multi-stage Docker builds",
-      "LoadBalancer service for external access",
-      "Health checks (liveness/readiness probes)",
-      "Horizontal pod scaling (2 replicas)",
-    ],
-    techStack: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Kubernetes",
-      "Docker",
-      "NGINX",
-    ],
-    keyDetails: [
-      "Service discovery via Kubernetes DNS",
-      "ClusterIP for internal services",
-      "Persistent Volume Claims (1Gi for PostgreSQL)",
-      "ConfigMaps and Secrets for configuration management",
-    ],
-    githubLinks: ["https://github.com/Vijay-papanaboina/k8s-learning"],
-  },
 ];
