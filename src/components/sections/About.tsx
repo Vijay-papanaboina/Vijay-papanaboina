@@ -3,8 +3,38 @@ import { Code2, Rocket, Users, Zap } from "lucide-react";
 import { use3DTilt } from "@/hooks/use3DTilt";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 export function About() {
+useGSAP(() => {
+gsap.utils.toArray(".about-card").forEach((card: any) => {
+  gsap.fromTo(
+    card,
+    {
+      y: 60,
+      opacity: 0,
+      rotate: 25,
+      borderRadius: "20%",
+    },
+    {
+      y: 0,
+      opacity: 1,
+      rotate: 0,
+      borderRadius: "8%",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        end: "top +=200", // use pixels for clarity
+        scrub: true,
+        markers: true,
+        invalidateOnRefresh: true,
+      },
+    }
+  );
+});
+
+}, []);
   const tiltProps = use3DTilt();
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
 
@@ -36,7 +66,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="relative py-16 md:py-20 overflow-hidden bg-background">
+    <section id="about" className="relative py-16 md:py-15 overflow-hidden bg-background">
       {/* Subtle radial gradient for depth */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent" />
 
@@ -64,7 +94,7 @@ export function About() {
             {highlights.map((highlight, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border bg-card transition-all duration-200 hover:shadow-xl hover:scale-105 hover:border-primary/50"
+                className="group relative overflow-hidden border bg-card transition-all duration-200 hover:shadow-xl hover:scale-105 hover:border-primary/50 about-card"
                 {...tiltProps}
               >
                 <CardContent className="pt-8 pb-8 px-6 relative z-10">

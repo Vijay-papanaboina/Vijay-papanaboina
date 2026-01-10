@@ -5,7 +5,7 @@ export function use3DTilt() {
   // - Max tilt: 10-15 degrees (subtle, not overwhelming)
   // - Perspective: 1500px (more subtle 3D effect)
   // - Sensitivity divisor: 15-20 (smoother, less sensitive)
-  const MAX_TILT = 12; // Maximum rotation in degrees
+  const MAX_TILT = 8; // Maximum rotation in degrees
   const PERSPECTIVE = 1500; // Perspective depth in pixels
   const SENSITIVITY = 15; // Higher = less sensitive
 
@@ -25,7 +25,7 @@ export function use3DTilt() {
     rotateX = Math.max(-MAX_TILT, Math.min(MAX_TILT, rotateX));
     rotateY = Math.max(-MAX_TILT, Math.min(MAX_TILT, rotateY));
 
-    card.style.transform = `perspective(${PERSPECTIVE}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02) translateY(-4px)`;
+    card.style.transform = `perspective(${PERSPECTIVE}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
     card.style.transition = "none"; // Disable transition during movement for immediate response
   };
 
@@ -33,7 +33,7 @@ export function use3DTilt() {
     const card = e.currentTarget;
     card.style.transition =
       "transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99)"; // Smooth return animation
-    card.style.transform = `perspective(${PERSPECTIVE}px) rotateX(0) rotateY(0) scale(1) translateY(0)`;
+    card.style.transform = `perspective(${PERSPECTIVE}px) rotateX(0) rotateY(0) translateY(0)`;
   };
 
   const tiltProps = {

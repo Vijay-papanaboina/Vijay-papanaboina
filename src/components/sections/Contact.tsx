@@ -9,7 +9,7 @@ export function Contact() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
 
   return (
-    <section id="contact" className="relative py-20 md:py-32 overflow-hidden bg-background">
+    <section id="contact" className="relative py-20 md:py-15 overflow-hidden bg-background">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] [mask-image:linear-gradient(to_bottom,transparent,black)]" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-border" />

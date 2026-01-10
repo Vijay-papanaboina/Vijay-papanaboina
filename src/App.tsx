@@ -3,6 +3,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Home } from "@/pages/Home";
 import { Terminal } from "@/components/ui/Terminal";
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollTrigger,SplitText)
 
 function App() {
   return (

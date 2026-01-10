@@ -7,7 +7,7 @@ export function Skills() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
 
   return (
-    <section id="skills" className="relative py-20 md:py-32 overflow-hidden bg-background">
+    <section id="skills" className="relative py-20 md:py-15 overflow-hidden bg-background">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       

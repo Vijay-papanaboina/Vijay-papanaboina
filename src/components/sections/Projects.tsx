@@ -28,7 +28,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-20 md:py-32 bg-background overflow-hidden"
+      className="relative py-15 md:py-15 bg-background overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02] [mask-image:linear-gradient(0deg,transparent,black)]" />

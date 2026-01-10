@@ -11,8 +11,25 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
 
 export function Hero() {
+  useGSAP(() => {
+    // const splitText = SplitText.create(".gsap", {
+    //   type: "words,lines",
+    // });
+    
+    gsap.from(".gsap", {
+      y: 60,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power3.out",
+      stagger: 0.05,
+    })
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -55,7 +72,7 @@ export function Hero() {
       <div className="container relative max-w-7xl mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Profile Picture with Glow - Monochrome */}
-          <div className="flex justify-center mb-8 animate-slide-in">
+          <div className="flex justify-center mb-8 gsap">
             <div className="relative group">
               <div className="absolute -inset-1 bg-white/20 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-1000 group-hover:duration-200"></div>
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-background flex items-center justify-center border-4 border-white/10 shadow-xl">
@@ -65,20 +82,20 @@ export function Hero() {
           </div>
 
           <div
-            className="space-y-4 animate-slide-in"
-            style={{ animationDelay: "0.1s" }}
+          // className="space-y-4 animate-slide-in"
+          // style={{ animationDelay: "0.1s" }}
           >
-            <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl text-primary pb-2">
+            <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl text-primary pb-2 hero-title gsap">
               Vijay Papanaboina
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground/80">
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground/80 hero-job-title gsap">
               Full-Stack Developer
             </h2>
           </div>
 
           <p
-            className="text-lg text-muted-foreground md:text-xl max-w-2xl mx-auto leading-relaxed animate-slide-in glass p-6 rounded-xl"
-            style={{ animationDelay: "0.2s" }}
+            className="text-lg text-muted-foreground md:text-xl max-w-2xl mx-auto leading-relaxed glass p-6 rounded-xl gsap"
+            // style={{ animationDelay: "0.2s" }}
           >
             Building modern web applications with expertise in{" "}
             <span className="text-foreground font-semibold">
@@ -97,8 +114,8 @@ export function Hero() {
 
           {/* Social Links */}
           <div
-            className="flex justify-center gap-4 animate-slide-in"
-            style={{ animationDelay: "0.3s" }}
+            className="flex justify-center gap-4 gsap"
+            // style={{ animationDelay: "0.3s" }}
           >
             <Button
               variant="ghost"
@@ -147,8 +164,8 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div
-            className="flex flex-wrap gap-4 justify-center animate-slide-in"
-            style={{ animationDelay: "0.4s" }}
+            className="flex flex-wrap gap-4 justify-center gsap"
+            // style={{ animationDelay: "0.4s" }}
           >
             <Button
               size="lg"

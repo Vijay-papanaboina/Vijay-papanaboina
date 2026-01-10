@@ -26,7 +26,7 @@ export function useInView<T extends HTMLElement = HTMLDivElement>(options?: UseI
         }
       },
       {
-        threshold,
+        threshold: 0.03,
       }
     );
 
