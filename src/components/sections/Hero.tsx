@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { SplitText } from "gsap/SplitText";
+// import { SplitText } from "gsap/SplitText";
 
 export function Hero() {
   useGSAP(() => {
@@ -24,9 +24,9 @@ export function Hero() {
     gsap.from(".gsap", {
       y: 60,
       opacity: 0,
-      duration: 0.3,
+      duration: 0.5,
       ease: "power3.out",
-      stagger: 0.05,
+      stagger: 0.1,
     })
   }, []);
 

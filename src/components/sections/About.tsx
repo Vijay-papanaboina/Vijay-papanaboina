@@ -27,7 +27,7 @@ gsap.utils.toArray(".about-card").forEach((card: any) => {
         start: "top 90%",
         end: "top +=200", // use pixels for clarity
         scrub: true,
-        markers: true,
+        // markers: true,
         invalidateOnRefresh: true,
       },
     }
