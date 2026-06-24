@@ -4,7 +4,7 @@ I'm a **Full-Stack Developer** passionate about building scalable web applicatio
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -42,85 +42,100 @@ I'm a **Full-Stack Developer** passionate about building scalable web applicatio
 
 ### Real-time & Communication
 
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socketdotio&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-005A9C?style=flat&logo=socketdotio&logoColor=white)
 ![WebRTC](https://img.shields.io/badge/WebRTC-333333?style=flat&logo=webrtc&logoColor=white)
 
 ---
 
-## � Authentication & Authorization
+## Featured Projects
 
-- Custom auth systems with JWT and secure httpOnly cookies
-- OAuth 2.0 & OpenID Connect with PKCE and state validation
-- Multi-provider OAuth (Google, GitHub, Discord)
-- Email verification flows with transactional email services
+### 🎛️ [Wayland Control Center](https://github.com/Vijay-papanaboina/wifi-manager)
 
----
+A lightweight, native control center panel for Wayland compositors managing Wi-Fi, Bluetooth, system audio/brightness, display warmth, and power controls for tiling window managers like sway, hyprland, niri.
 
-## 📊 Observability
-
-- Metrics and dashboards with Prometheus & Grafana
-- Distributed tracing with OpenTelemetry and Tempo
-- Log aggregation with Loki
-
----
-
-## 🔒 Secrets Management
-
-- Kubernetes-native secret management with HashiCorp Vault
-- Static secrets (KV) and dynamic credentials rotation
-- Auto-unseal with cloud KMS
-
----
-
-## �🚀 Featured Projects
+- Real-time NetworkManager and BlueZ state updates via asynchronous D-Bus signal subscriptions
+- Hardware adjustments (volume, brightness, color temperature, system power states) utilizing layer-shell overlays and native backend APIs
+- **Tech:** Rust, GTK4, gtk4-layer-shell, zbus, libpulse, systemd-logind, wlr-gamma-control
 
 ### 🍕 [Food Delivery Platform](https://github.com/Vijay-papanaboina/Food-Delivery-Backend)
 
 A comprehensive food ordering system with **microservices architecture** and **Apache Kafka** event-driven communication.
 
-- 5 microservices: Order, Payment, Restaurant, Delivery, Notification
-- Real-time order tracking with timeline visualization
-- **Tech:** Node.js, Express, Kafka, React 19, PostgreSQL, Zustand
+- 6 microservices: User, Order, Payment, Restaurant, Delivery, and Notification services
+- Real-time order lifecycle tracking and timeline visualization
+- **Tech:** Node.js, Express, Kafka, PostgreSQL, Drizzle ORM, React 19, Tailwind CSS 4, Zustand, React Query, shadcn/ui
 
-### ⚡ [Frontbase - Vercel/Netlify Alternative](https://github.com/Vijay-papanaboina/Frontbase-Backend)
+### ⚡ [Frontbase](https://github.com/Vijay-papanaboina/Frontbase-Backend)
 
-Self-hosted deployment platform for frontend apps with **GitHub integration** and **Cloudflare R2** storage.
+Self-hosted deployment platform for static frontend apps with **GitHub integration** and **Cloudflare R2** storage.
 
-- ZIP upload with automatic extraction
-- Edge routing with Cloudflare Workers
-- **Tech:** Node.js, GitHub Actions, Cloudflare Workers, React
+- GitHub Action deployment workflows, secret injection with public-key crypto, and ZIP extraction
+- Subdomain mapping and static file distribution via Cloudflare Workers and KV routing
+- **Tech:** Node.js, Express, Drizzle ORM, PostgreSQL, Cloudflare R2, Cloudflare KV, GitHub Actions, React, Zustand, Tailwind CSS
+
+### 🏥 [FHIR MERN Healthcare Platform](https://github.com/Vijay-papanaboina/FHIR-MERN)
+
+A healthcare monorepo mapping patient observations to the standard HL7 FHIR specification with real-time analytics.
+
+- Express middleware guards and observation webhook signature verification using secure secret tokens
+- Real-time observation alerts pushed to the clinician dashboard via Server-Sent Events (SSE)
+- **Tech:** React, Node.js, Express, MongoDB, HAPI FHIR Server, Docker Compose, TypeScript Workspaces
 
 ### 📹 [Group Video Conferencing Platform](https://github.com/Vijay-papanaboina/VideoChat)
 
 WebRTC-based group video calling with room management and screen sharing.
 
-- Up to 100 users per room
-- Native WebRTC implementation
-- **Tech:** React 19, Socket.io, Drizzle ORM
+- Native WebRTC SDP/ICE candidates signaling and responsive video layouts (up to 100 users)
+- Password-protected rooms, custom participant controls, and text messaging chat history
+- **Tech:** React 19, TypeScript, Socket.io, Drizzle ORM, PostgreSQL, Zustand, Radix UI, Tailwind CSS
+
+### ⚙️ [SharedResource K8s Operator](https://github.com/Vijay-papanaboina/sharedresource-operator)
+
+A Kubernetes operator built in Go to securely and auditably synchronize Secrets and ConfigMaps across namespaces.
+
+- Continuous reconciliation loop with self-healing drift detection and checksum-based writes
+- Granular key filtering (includes/excludes) and configurable namespace replication strategies
+- **Tech:** Go 1.24, Kubebuilder, Controller Runtime, Kind, Docker
 
 ### 💬 [Real-Time Chat & Audio Calling App](https://github.com/Vijay-papanaboina/Chat-App-Frontend)
 
 Feature-rich messaging app with **WebRTC** video/audio calls and **Socket.io** real-time messaging.
 
-- Push notifications with Firebase Cloud Messaging
-- PWA with offline support
-- **Tech:** Vue 3, Socket.io, WebRTC, SimplePeer, Supabase
+- Real-time user presence tracking, unread badges, double-ticking, and Firebase Cloud Messaging (FCM) push alerts
+- Offline PWA support, modular client state management, and Supabase integration
+- **Tech:** Vue 3, Pinia, Socket.io, WebRTC, SimplePeer, Supabase Auth/Storage, Firebase Admin, Node.js, PostgreSQL
 
 ### 🛋️ [Furniture E-Commerce Store](https://github.com/Vijay-papanaboina/Ecommerce-Frontend)
 
 Full e-commerce platform with **Razorpay** payment integration and guest cart support.
 
-- Product catalog with search/filtering
-- Automatic cart merge on login
-- **Tech:** React 19, Chakra UI, Sequelize, Supabase Auth
+- LocalStorage guest cart synchronization and automatic cart merge upon user login
+- Responsive product directory filters, image carousels, and verified signature signature check
+- **Tech:** React 19, Chakra UI, Zustand, React Query, Sequelize ORM, PostgreSQL, Supabase Auth, Razorpay, ImageKit
 
 ### 🐘 [PGBase - PostgreSQL Deployment Platform](https://github.com/Vijay-papanaboina/PGBase-Frontend)
 
 Self-hosted platform for containerized PostgreSQL databases on Oracle VM.
 
-- Automatic port allocation
-- NGINX reverse proxy routing
-- **Tech:** React, Zustand, Sequelize, Docker
+- Docker container initialization API and dynamic database user provision flows
+- Automatic port allocation starting from port 4000 and reverse proxy routing via NGINX
+- **Tech:** React, Zustand, Sequelize, PostgreSQL, Node.js, Express, JWT, Docker, NGINX
+
+### 📦 [Cloud Storage Platform](https://github.com/Vijay-papanaboina/cloud-storage-api)
+
+A multi-component cloud storage application featuring a Spring Boot REST API, a responsive web dashboard, and a Go CLI tool.
+
+- JWT-based authentication with cookie token rotation and role-based access control (RBAC)
+- Interactive CLI for file/folder actions, secure local config formatting, and custom CLI build variables
+- **Tech:** Spring Boot 3.5, Java 25, PostgreSQL, Go 1.24, React 19, Tailwind CSS 4, Zustand, Flyway
+
+### 🧵 [Threads Social Media Clone](https://github.com/Vijay-papanaboina/Threads-frontend)
+
+A responsive social media platform inspired by Twitter and Threads, featuring real-time feeds, user interactions, and chat.
+
+- Authenticated flows via JWT and Google OAuth 2.0 with email registration validation
+- Optimistic state updates on social actions (likes, comments) using a hybrid state cache
+- **Tech:** React 19, Chakra UI, Redux Toolkit, React Query, Node.js, PostgreSQL
 
 ---
 
