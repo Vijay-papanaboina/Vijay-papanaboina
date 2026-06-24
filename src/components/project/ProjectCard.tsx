@@ -18,12 +18,12 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
 
   return (
     <Card
-      className="group relative overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] bg-card border-2 hover:border-primary/20 flex flex-col cursor-pointer p-0 h-[600px]"
+      className="group relative overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] bg-card border-2 hover:border-primary/20 flex flex-col cursor-pointer p-0 h-auto sm:h-[600px]"
       onClick={onViewDetails}
       {...tiltProps}
     >
       {/* Image Preview at Top - 60% */}
-      <div className="relative w-full h-[60%] overflow-hidden">
+      <div className="relative w-full aspect-video sm:aspect-auto sm:h-[60%] overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
@@ -34,7 +34,7 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
       </div>
 
       {/* Content Section - 40% */}
-      <div className="flex flex-col h-[40%] p-6 justify-between">
+      <div className="flex flex-col h-auto sm:h-[40%] p-6 justify-between gap-6">
         <div className="space-y-2">
           {/* Category/Complexity Label */}
           <Badge
@@ -45,7 +45,7 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
           </Badge>
 
           {/* Title */}
-          <h3 className="text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+          <h3 className="text-lg sm:text-xl font-bold leading-tight group-hover:text-primary transition-colors">
             {project.title}
           </h3>
 
@@ -56,9 +56,9 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
         </div>
 
         {/* Bottom Section: Tech Stack Icons + Link */}
-        <div className="flex items-center justify-between pt-3 border-t border-border/50">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between items-start pt-3 border-t border-border/50">
           {/* Tech Stack Icons */}
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {visibleTech.map((tech) => {
               const techInfo = techIconMap[tech];
               return techInfo ? (
@@ -90,7 +90,7 @@ export function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
               e.stopPropagation();
               onViewDetails();
             }}
-            className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors group/link whitespace-nowrap cursor-pointer"
+            className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors group/link whitespace-nowrap cursor-pointer self-start sm:self-auto"
           >
             Check Live Site
             <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />

@@ -42,7 +42,7 @@ export function Header() {
         scrolled ? "glass shadow-md py-2" : "bg-transparent py-4"
       )}
     >
-      <div className="container px-6 flex items-center justify-between">
+      <div className="container px-6 flex items-center justify-center md:justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="p-2 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
             <Code2 className="h-5 w-5 text-primary" />

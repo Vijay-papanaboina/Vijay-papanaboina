@@ -3,7 +3,7 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
   {
     id: "wifi-manager",
-    title: "Wayland Control Center (wifi-manager)",
+    title: "Wayland Control Center",
     description:
       "A lightweight, native control center panel for Wayland compositors managing Wi-Fi, Bluetooth, system audio/brightness, display warmth, and power controls for tiling window managers.",
     image: "/projects/wifi-manager.png",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
   },
   {
     id: "frontbase",
-    title: "Frontbase - Vercel/Netlify Alternative",
+    title: "Frontbase - Frontend deployment platform",
     description:
       "A self-hosted deployment platform for frontend applications with GitHub integration, automated deployments to Cloudflare R2, and edge routing.",
     image: "/projects/frontbase.png",
