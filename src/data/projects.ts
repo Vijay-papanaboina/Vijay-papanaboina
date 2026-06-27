@@ -167,26 +167,16 @@ export const projects: Project[] = [
   },
   {
     id: "fhir-mern",
-    title: "FHIR MERN Healthcare Platform",
+    title: "CareSync Healthcare Platform",
     description:
       "A full-stack FHIR healthcare application built with React, Express, MongoDB, and integration with a HAPI FHIR server gateway.",
-    image: "/projects/fhir-mern.png",
+    image: "/projects/caresync.png",
     complexity: "Advanced",
     repos: [
       {
-        name: "Express API & Backend",
-        tech: "Node.js, Express, MongoDB, Better Auth, Docker",
-        purpose: "REST API proxying FHIR gateway and handling webhook observations.",
-      },
-      {
-        name: "Healthcare Client",
-        tech: "React, Vite, TypeScript, Tailwind CSS",
-        purpose: "Responsive dashboard displaying patient information and real-time alerts.",
-      },
-      {
-        name: "Shared Schema Package",
-        tech: "TypeScript, npm workspace",
-        purpose: "Shared types and DTO definitions package consumed by frontend and backend.",
+        name: "CareSync Healthcare Platform (Monorepo)",
+        tech: "React, Node.js, Express, MongoDB, Docker, TypeScript, Tailwind CSS",
+        purpose: "Monorepo containing React frontend, Express API backend, and shared TypeScript workspaces.",
       },
     ],
     features: [
@@ -344,7 +334,7 @@ export const projects: Project[] = [
     title: "Furniture E-Commerce Store",
     description:
       "A furniture e-commerce platform with product catalog, shopping cart (guest + authenticated), order management, and Razorpay payment integration.",
-    image: "/projects/ecommerce.png",
+    image: "/projects/furniture-ecommerce.png",
     complexity: "Intermediate",
     repos: [
       {
